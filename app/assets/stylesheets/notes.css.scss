@@ -36,16 +36,7 @@
     font-size: 1.375rem;
     line-height: 1.75;
   }
-  .buttons {
-    margin-top: 3rem;
-    a.button {
-      padding: .5rem 2rem;
-      border-radius: 2rem;
-      text-decoration: none;
-      color: $green;
-      border: 5px solid #E9E9E9;
-      @include bold_font;
-      background: transparent;
-    }
+.buttons {
+  margin-top: 3rem;
   }
 }

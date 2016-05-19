@@ -1,11 +1,12 @@
 #banner {
-  background-image: url(image_path("welcome_banner_image.jpg"));
+  background-image: url(image_path("mountains2.jpg"));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   width: 100%;
-  min-height: 500px;
+  min-height: 900px;
   display: table;
+  padding: 12rem;
   .banner_content {
     display: table-cell;
     vertical-align: middle;
@@ -41,13 +42,14 @@
 }
 
 #callouts {
-  background-image: url(image_path("callout_background.jpg"));
+  background-image: url(image_path("mountains3.jpg"));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   width: 100%;
   min-height: 400px;
   display: table;
+  padding: 5rem;
   .callout_inner {
     display: table-cell;
     vertical-align: middle;

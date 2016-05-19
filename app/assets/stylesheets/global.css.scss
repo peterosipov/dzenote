@@ -1,6 +1,7 @@
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
 $green: #33CD99;
+$dark_green: #26be98;
 
 @mixin bold_font {
   font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
@@ -41,6 +42,7 @@ body {
 button, .button {
   border: none;
   outline: none;
+  transition: 0.2s ease-out;
   background: $green;
   padding: 1rem 3.5rem;
   border-radius: 2rem;
@@ -48,6 +50,30 @@ button, .button {
     color: white;
     text-decoration: none;
   }
+}
+.button:hover {
+  color: white;
+  background: $dark_green;
+  transition: 0.2s ease-in;
+}
+
+.button-delete {
+  color: white;
+  border: none;
+  outline: none;
+  transition: 0.2s ease-out;
+  background: $light_gray;
+  padding: 1rem 3.5rem;
+  border-radius: 2rem;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.button-delete:hover {
+  color: white;
+  background: $dark_gray;
+  transition: 0.2s ease-in;
 }
 
 .button {
