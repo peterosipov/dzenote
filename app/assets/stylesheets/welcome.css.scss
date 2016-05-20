@@ -72,7 +72,9 @@
 
 #middle_cta {
   padding: 0;
+  padding-bottom: 5em;
   h2 {
+    text-align: center;
     @include bold_font;
     color: $dark_gray;
     font-size: 3rem;
