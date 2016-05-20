@@ -1,12 +1,18 @@
 .wrapper_with_padding
   #notes.clearfix
     - unless @notes.blank?
-      - @notes.each do |note|
+      - current_user.notes.each do |note|
         %a{ href: (url_for [note])}
           .note
             %p.title= note.title
-            %p.date= time_ago_in_words(note.created_at)
+            %p.mini-content
+              = truncate(note.content, length: 110)
+            %p.date
+              Created
+              = time_ago_in_words(note.created_at)
+              ago.
     - else
-      %h2 Add a Note
-      %p It appears you haven't created any notes yet... Lets fix that. Why don't you go ahead and create a new note.
-      %button= link_to "New Note", new_note_path
+      %h2 Write something.
+      %p Add a note and have an access to it from any place in the world.
+      .button-field
+        = link_to "Add Note", new_note_path, class: "button"

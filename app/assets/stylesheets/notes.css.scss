@@ -8,11 +8,18 @@
     float: left;
     border-radius: .4rem;
     position: relative;
+    transition: 0.1s ease-out;
     .title {
       @include bold_font;
       color: white;
       margin: 0;
       letter-spacing: 1px;
+    }
+    .mini-content {
+      position: absolute;
+      bottom: 3rem;
+      color: $green;
+      font-size: 0.85rem;
     }
     .date {
       position: absolute;
@@ -21,6 +28,10 @@
       color: $green;
       font-size: .85rem;
     }
+  }
+  .note:hover {
+    background: $middle-gray;
+    transition: 0.1s ease-in;
   }
 }
 

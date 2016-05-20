@@ -2,6 +2,7 @@ class NotesController < ApplicationController
 
   before_action :set_note, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_same_user, except: [:index, :new, :create]
 
   def index
     @notes = Note.all.order("created_at DESC")
@@ -40,6 +41,12 @@ class NotesController < ApplicationController
   end
 
   private
+
+  def require_same_user
+    if current_user != @note.user
+      redirect_to root_path
+    end
+  end
 
   def set_note
     @note = Note.find(params[:id])
