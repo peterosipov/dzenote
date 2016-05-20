@@ -1,26 +1,22 @@
 #banner
   .banner_content
     %h1 DZENOTE
-    %p Your access to pen and paper anywhere, anytime.
+    %p Your 24/7 access to pen and paper.
     = link_to "Sign Up", new_user_registration_path, class: "button"
 #testimonial
   .wrapper
     %p.quote I created this app for my own needs. Since Evernote-like cloud
     services became quite heavy for writing simple things down.
     %p.name - Petr
-#callouts
-  .callout_inner
+#middle_cta
+  #notes
     .wrapper
-      .callout
-        %h2 1. Sign up
-      .callout
-        %h2 2. Add a note
-      .callout
-        %h2 3. Save it in cloud.
+      %h2 Example notes list
+      = render 'notes/example_notes'
 #bottom_cta
   .wrapper
     %h2 Sign up in 10 sec.
     %p Simply put your email & password and start using pen and paper.
-    = link_to "Join us!", new_user_registration_path, class: "button"
+    = link_to "Why not?", new_user_registration_path, class: "button"
 %footer
   %p &copy; DZENOTE

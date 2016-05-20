@@ -1,0 +1,10 @@
+- @example_notes.each do |note|
+  %a{ href: (url_for [note])}
+    .note
+      %p.title= note.title
+      %p.mini-content
+        = truncate(note.content, length: 110)
+      %p.date
+        Created
+        = time_ago_in_words(note.created_at)
+        ago.
